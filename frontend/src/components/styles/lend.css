@@ -1,0 +1,25 @@
+.lend .status{
+    
+    display: flex;
+    flex-direction: row;
+  
+    justify-content: space-evenly;
+}
+.lend .pending{
+    object-fit: cover;
+    
+}
+.lend .box{
+    height: 200px;
+    font-size: 17px;
+   
+}
+.lend .lending{
+    width: 150px;
+}
+.lend h2{
+    margin: 3rem;
+}
+.lend img{
+    width: 170px;
+}

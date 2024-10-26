@@ -1,0 +1,187 @@
+
+.register .box{
+    margin: 2rem;
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    height: 550px;
+   
+    border-radius: 25px;
+    padding: 1rem
+   
+    
+}
+.register .con1{
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.register .con2{
+   font-size: 20px;
+}
+.register .con3{
+    font-size: 20px;
+}
+.register input[type="text"],
+input[type="email"],
+input[type="password"],
+.register textarea
+{
+    width: 200px;
+    height: 25px;
+   
+    border: none;
+    border-bottom: solid #ccc 2px;
+
+}
+.register #gender{
+    text-align: left;
+    margin-left: 25px;
+    font-size: 20px;
+
+}
+.register .gender{
+    margin-left: 2rem;
+}
+.register input[type="radio"]{
+
+
+  margin-left: 3rem;
+    padding-left: 50px;
+    text-align: left;
+
+}
+
+.register .Terms{
+    text-decoration: none;
+}
+.register button{
+   
+    padding: 10px;
+    
+    cursor: pointer;
+    color: white;
+    background-color:rgb(95, 37, 159) ;
+    border: none;
+    border-radius: 10px;
+    font-size:20px;
+    font-family:'Times New Roman', Times, serif;
+
+}
+
+
+.register .massregister{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: rgb(95, 37, 159);
+    height: 100vh;
+}
+.register .cls{
+    width: 50%;
+}
+.register .signin{
+    margin-bottom: 2rem;
+}
+.register .design{
+    width: 50%;
+    
+    background-color:white ;
+    text-align: center;
+    align-items: center; 
+    color: black;
+    border: 3rem solid rgb(95, 37, 159);
+    border-radius: 50% 50% 50% 50%;
+    margin: 2rem;
+}
+.register .btn1:hover{
+    box-shadow: 3px 1px 3px 1px black;
+}
+@media screen and (max-width:786px) {
+     .register .box{
+        width: 100%;
+     }
+     .register .massregister{
+        display: flex;
+        flex-direction: column;
+     }
+     .register .design{
+          background-color: white;
+          color:rgb(95, 37, 159);
+          
+     }
+     .register .cls{
+        width: 50%;
+    }
+    .register .con1{
+        width: 100%;
+    }
+    .register input[type="text"],
+     input[type="email"],
+     input[type="password"],
+     textarea
+     {
+         width: 200px;
+         height: 25px;
+        
+         border: none;
+         border-bottom: solid #ccc 2px;
+     
+     }
+}
+@media screen and (max-width:1000px) {
+    .register .massregister{
+        display: flex;
+        flex-direction: column;
+     }
+     .register .design{
+          background-color: white;
+          color:rgb(95, 37, 159);
+          border-radius: 25px;
+          font-size: 20px;
+          
+
+     }
+   .register .con1{
+    display: flex;
+    justify-content: space-evenly;
+
+   }
+   
+  
+     
+
+}
+@media screen and (max-width:1080px) {
+    
+     .register .design{
+          background-color: white;
+          color:rgb(95, 37, 159);
+          border-radius: 25px;
+          font-size: 20px;
+         
+          
+
+     }
+     
+   
+}
+
+@media screen and (max-width:1110px) {
+    
+    
+    .register input[type="text"],
+     input[type="email"],
+     input[type="password"],
+     textarea
+     {
+         width: 100px;
+         height: 25px;
+        
+         border: none;
+         border-bottom: solid #ccc 2px;
+     
+     }
+}
