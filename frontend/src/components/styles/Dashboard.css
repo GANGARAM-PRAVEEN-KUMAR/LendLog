@@ -1,0 +1,80 @@
+.Dashboard *{
+    font-family: 'Times New Roman', Times, serif;
+}
+.Dashboard .Container1{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2rem;
+}
+
+.Dashboard .box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 25%;
+    margin: 2rem;
+    padding: 1rem;
+    box-shadow: 3px 15px 20px 10px silver;
+    height: 10rem;
+    
+}
+.Dashboard .box1 button{
+    background-color: rgb(95, 37, 159);
+    color: white;
+    width: 10rem;
+    height: 2.5rem;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.Dashboard .bottom{
+  align-items: center;
+} 
+.Dashboard .box1 button:hover{
+    border-radius: 0;
+    transition: .5s ease-in-out;
+    box-shadow: 3px 5px 3px 0px  silver;
+}
+.Dashboard .massdashboard{
+   
+    width: 100%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+    height: 37rem;
+
+
+}  
+@media screen and (max-width:1200px) {
+    .Dashboard .box1{
+           width: 40%;
+           
+    }
+}  
+
+@media screen and (max-width:1000px) {
+  
+}  
+@media screen and (max-width:800px) {
+    .Dashboard .box1{
+        width: 60%;
+        
+ }
+    
+}  
+@media screen and (max-width:600px) {
+    .Dashboard .Container1{
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+ }
+ /* .Dashboard .box1{
+   
+    
+} */
+}  

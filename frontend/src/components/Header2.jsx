@@ -1,59 +1,74 @@
-import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
-import logo from "./images/logo.jpg";
-import "./styles/head2.css";
-
-function Header2() {
-  const navigate = useNavigate()
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-   
-    localStorage.removeItem("username");
-    
-    navigate("/");
-    return;
-  };
-
+import React from 'react'
+import logo3 from './images/logo3.jpg'
+import './styles/home2.css'
+import { useState } from 'react'
+export default function Header2() {
+    const [text, setText] = useState("Profile")
+   let headtext=()=>{
+        if(text==="Profile"){
+            setText("UserName");
+        }
+        else{
+            setText("Profile");
+        }
+    }
 
   return (
     <>
-    <div className="head2">
-      <div className="container">
-        <div className="header">
-          <div className="box1">
-            <img src={logo} className="img1" alt="" />
-            <h1 className="head1">LendLog</h1>
-          </div>
-          <ul className="order">
-            <li className="item">
-              <NavLink to="/dashboard" className="link">
-                Home
-              </NavLink>
-            </li>
-            <li className="item">
-              <NavLink to="/lend" className="link">
-                Lend
-              </NavLink>
-            </li>
-            <li className="item">
-              <NavLink to="/borrow" className="link">
-                Borrow
-              </NavLink>
-            </li>
-            <li className="item">
-              <NavLink to="/contactus" className="link">
-                Contact Us
-              </NavLink>
-            </li>
-          </ul>
-        </div>
-        <div className="logout">
-          <button className="l1" onClick={handleLogout}>Logout</button>
-        </div>
-      </div>
-      </div>
-    </>
-  );
-}
+    <div className="LendHome2">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+  <div className="container-fluid ">
+     <div className="flex1">
+         <div className="imgbg">
+            <img src={logo3} alt="" />
+         </div>
+         <div className="lend">
+            <h1>LenLog</h1>
+         </div>
+     </div>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <li className="nav-item">
+          <a className="nav-link active text-dark" aria-current="page" href="#">Home</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-dark" href="#">Status</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-dark" href="#">History</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link text-dark" href="#">Notifications</a>
+        </li>
+        </ul>
+        <ul className="navbar-nav mx-5">
 
-export default Header2;
+        
+        <li className="nav-item dropdown ">
+          <a className="nav-link dropdown-toggle text-dark " onClick={headtext} href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                {text}
+          </a>
+
+          <div className="container">
+          <ul className="dropdown-menu">
+            <li><a className="dropdown-item " href="#">Profile</a></li>
+            <li><a className="dropdown-item" href="#">Settings</a></li>
+           
+            <li><a className="dropdown-item" href="#">Logout</a></li>
+          </ul>
+          </div>
+          
+        </li>
+        
+      </ul>
+      </div>
+    </div>
+  
+</nav>
+</div>
+    </>
+  )
+}

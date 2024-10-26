@@ -1,4 +1,4 @@
-.LendFrom *{
+.BorrowerForm *{
     margin:0px;
     box-sizing: border-box;
     text-decoration: none;
@@ -6,16 +6,16 @@
     align-items: center;
   
 }
-.LendFrom{
+.BorrowerForm{
     display: flex;
     justify-content: center;
 }
-.LendFrom h1{
+.BorrowerForm h1{
     font-size: 4rem; 
     color: rgb(95, 37, 159);
     margin: .7rem;
 }
-.LendFrom .ourLendForm{
+.BorrowerForm .FrndBorrowForm{
     margin: 2rem;
     box-shadow:   rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     ;
@@ -26,7 +26,7 @@
     width: 50%;
    
 }
-.LendFrom .lform{
+.BorrowerForm .Bform{
     margin: 1rem;
     padding: 1rem;
     font-size: 23px;
@@ -39,27 +39,37 @@
    
    
 }
-.LendFrom .item{
+
+.BorrowerForm .item{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
+    align-items: center;
   
 }
-input[type='text'],
-input[type='date']
+.BorrowerForm input[type='text'],
+.BorrowerForm input[type='date'],
+.BorrowerForm input[type='email']
 {
     border: none;
     border-bottom: 1px solid black;
     width: 100%;
 }
-.LendFrom .butn{
- width: 0%;
+.BorrowerForm .butn{
+ width: 100%;
  margin: 1rem;
 
 
 }
-.LendFrom .butn button{
+.BorrowerForm .butn{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.BorrowerForm .butn button{
     
     width: 200px;
     height: 2rem;
@@ -72,14 +82,14 @@ input[type='date']
     
     
 } 
-.LendFrom .butn button:hover{
+.BorrowerForm .butn button:hover{
     
     
    
     opacity: 2;
     
 } 
-.LendFrom .butn button:active{
+.BorrowerForm .butn button:active{
     
     
     background-color: rgb(95, 37, 159);
@@ -87,40 +97,43 @@ input[type='date']
     
 } 
 @media screen and (max-width:900px) {
-    .LendFrom .ourLendForm{
+    .BorrowerForm .FrndBorrowForm{
         width: 100%;
      }
     }
 
 @media screen and (max-width:800px) {
-    .LendFrom h1{
+    .BorrowerForm h1{
          font-size: 3rem;
     }
-    .LendFrom .butn button{
+    .BorrowerForm .butn button{
        width:170px;
     }
-    .LendFrom .ourLendForm{
+    .BorrowerForm .FrndBorrowForm{
        width: 100%;
     }
-    .LendFrom .item{
+    .BorrowerForm .item{
         font-size: 23px;
     }
 
 
 }
-
 @media screen and (max-width:700px) {
-    .LendFrom .butn button{
+    .BorrowerForm .butn button{
         width:150px;
      }
     }
 
 @media screen and (max-width:400px) {
-    .LendFrom .butn button{
+    .BorrowerForm h1{
+        font-size: 2rem;
+    }
+   
+    .BorrowerForm .butn button{
         width:120px;
      }
         
-    .LendFrom .item{
+    .BorrowerForm .item{
         gap:1rem;
     }
 
