@@ -1,16 +1,19 @@
 // import "./contact.css";
-//  import support from"./images/support.png";
+import support from"./images/trans.jpg";
+import Footer from "./Footer";
+import Header1 from "./Header1";
 import Header2 from "./Header2";
 import "./styles/contact.css"
 import { NavLink } from "react-router-dom";
 function Contact() {
   return (
     <>
+    <Header1/>
     {/* <Header2/> */}
       <div class="contactus">
         <div class="support">
           <div class="support-img">
-            {/* <img src={support} /> */}
+            <img src={support} />
           </div>
           <div>
             <span>Fell free to ask us!</span>
@@ -27,6 +30,7 @@ function Contact() {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 }

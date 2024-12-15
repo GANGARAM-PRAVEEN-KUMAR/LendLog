@@ -20,6 +20,10 @@
  .LendHome2 .imgbg img{
    width:60px;
  }
+ .LendHome2 .log{
+   text-decoration: none;
+   color: rgb(95, 37, 159);
+ }
  .LendHome2 .navbar-nav{
     font-family: 'Times New Roman', Times, serif;
     margin-left: 2rem;
@@ -32,6 +36,10 @@
  .LendHome2 .container{
     margin-right: 6rem;
  }
+ .LendHome2 .dropdown-menu NavLink{
+    background-color: white;
+     
+ } 
  .LendHome2 .dropdown-menu{
       font-size:1.3rem ;
       border: none;
@@ -39,6 +47,7 @@
       box-shadow: 3px 15px 20px 10px silver;
      
  }
+
  @media only screen and (max-width:1000px) {
   .LendHome2 .navbar-nav{
    display: flex;

@@ -1,32 +1,51 @@
-.LendFrom *{
-    margin:0px;
+.LendForm * {
+    margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     align-items: center;
-  
 }
-.LendFrom{
+
+.LendForm {
     display: flex;
     justify-content: center;
 }
-.LendFrom h1{
+
+.LendForm h1 {
     font-size: 4rem; 
     color: rgb(95, 37, 159);
     margin: .7rem;
 }
-.LendFrom .ourLendForm{
+
+.LendForm .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(10px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.LendForm .ourLendForm {
     margin: 2rem;
-    box-shadow:   rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    ;
+    background: White; 
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     display: flex;
     flex-direction: column;
     justify-self: center;
-
     width: 50%;
-   
+    position: relative; 
 }
-.LendFrom .lform{
+
+.LendForm .lform {
     margin: 1rem;
     padding: 1rem;
     font-size: 23px;
@@ -36,93 +55,81 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
-   
-   
 }
-.LendFrom .item{
+
+.LendForm .item {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
-  
 }
-input[type='text'],
-input[type='date']
-{
+
+.LendForm input[type='text'],
+.LendForm input[type='date'] {
     border: none;
     border-bottom: 1px solid black;
     width: 100%;
 }
-.LendFrom .butn{
- width: 0%;
- margin: 1rem;
 
-
+.LendForm .butn {
+    width: 100%; 
+    margin: 1rem;
+    display: flex; 
+    justify-content: center; 
 }
-.LendFrom .butn button{
-    
+
+.LendForm .butn button {
     width: 200px;
-    height: 2rem;
-   
+    height: 2.5rem;
     color: white;
     background-color: rgb(95, 37, 159);
-    opacity: .8;
+    opacity: 0.8;
     border-radius: 5px;
-   
-    
-    
-} 
-.LendFrom .butn button:hover{
-    
-    
-   
-    opacity: 2;
-    
-} 
-.LendFrom .butn button:active{
-    
-    
-    background-color: rgb(95, 37, 159);
-    opacity: 2;
-    
-} 
-@media screen and (max-width:900px) {
-    .LendFrom .ourLendForm{
-        width: 100%;
-     }
-    }
-
-@media screen and (max-width:800px) {
-    .LendFrom h1{
-         font-size: 3rem;
-    }
-    .LendFrom .butn button{
-       width:170px;
-    }
-    .LendFrom .ourLendForm{
-       width: 100%;
-    }
-    .LendFrom .item{
-        font-size: 23px;
-    }
-
-
+    border: none; 
+    cursor: pointer; 
 }
 
-@media screen and (max-width:700px) {
-    .LendFrom .butn button{
-        width:150px;
-     }
+.LendForm .butn button:hover {
+    opacity: 1; 
+}
+
+.LendForm .butn button:active {
+    background-color: rgb(95, 37, 159);
+    opacity: 1;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    .LendForm .ourLendForm {
+        width: 100%; 
+}
+}
+
+@media screen and (max-width: 800px) {
+    .LendForm h1 {
+        font-size: 3rem; /* Decrease heading size */
     }
-
-@media screen and (max-width:400px) {
-    .LendFrom .butn button{
-        width:120px;
-     }
-        
-    .LendFrom .item{
-        gap:1rem;
+    .LendForm .butn button {
+        width: 170px; /* Smaller button width */
     }
+}
 
+@media screen and (max-width: 700px) {
+    .LendForm .butn button {
+        width: 150px; 
+    }
+}
 
+@media screen and (max-width: 400px) {
+    .LendForm h1 {
+        font-size: 2rem; 
+    }
+    
+    .LendForm .butn button {
+        width: 120px; 
+    }
+    
+    .LendForm .item {
+        gap: 1rem;
+}
 }

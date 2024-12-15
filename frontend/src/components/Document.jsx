@@ -1,51 +1,65 @@
-import React, { useState } from 'react';
-import "./styles/StaticForm.css";
+import React from 'react';
+import './styles/StaticForm.css';
+import logo from './images/logo3.jpg';
+import Navigation from './Navigation';
 
 export default function Document() {
-  const [date, setDate] = useState("2024-10-04");
-  const [borrower, setBorrower] = useState("John Doe");
-  const [amount, setAmount] = useState("$10,000");
-  const [lendType, setLendType] = useState("Personal Loan");
-  const [dueDate, setDueDate] = useState("2025-10-04");
-  const [repaymentPeriod, setRepaymentPeriod] = useState("12 months");
-  const [startDate, setStartDate] = useState("2024-11-01");
-  const [endDate, setEndDate] = useState("2025-10-01");
-  const [interest, setInterest] = useState("5%");
-  const [monthlyPayment, setMonthlyPayment] = useState("$850");
-  const [paymentDueDate, setPaymentDueDate] = useState("1st");
-  const [lateFee, setLateFee] = useState("$50");
-  const [Lender, setLender] = useState("Rakesh");
+
+  const handlePrint = () => {
+    window.print();
+  };
+
+
 
   return (
-    <div className='document'>
-    <div className='FullForm'>
-      <div className="agreement">
-        <h1>Personal Loan Agreement Form</h1>
-        <p>On {date}, I  {borrower}, will lend
-        a sum of {amount} in the form of {lendType}.
-        which is to be repaid in full by {dueDate}.
-        Payments will be made over a period of {repaymentPeriod},
-        starting on {startDate} and ending on {endDate}.
-        The interest rate is {interest}, resulting in each monthly payment of {monthlyPayment}.
-        Each monthly payment must be made before or on the {paymentDueDate} of every month.
-        Any late payment will result in a late fee of {lateFee}.</p>
+    <>
+    <Navigation/>
+    <div className="document">
+      <div className="FullForm" id="document-content">
+        <div className="agreement">
+          <div className="dochead">
+            <p className="myHead">LendLog</p>
+            <img src={logo} alt="logo" />
+          </div>
+          <h2>Personal Loan Contract</h2>
+          <p>
+            This is an agreement between John Doe, henceforth known as "Borrower", and Rakesh, henceforth known as "Lender".
+          </p>
+          <p>Borrower wishes to borrow $10,000, known as "Loan", from Lender. The Loan will be furnished to Borrower on 2024-10-04.</p>
+          <h3>Conditions for this Loan are as follows:</h3>
+          <ol>
+            <li>Borrower will begin repayment of Loan on 2024-11-01.</li>
+            <li>The final date for repayment will be 2025-10-01.</li>
+            <li>Failure to repay the Loan within the due period will result in a fine of $50 or legal action.</li>
+          </ol>
+          <p>
+            Borrower and Lender agree to the conditions above and sign to that effect in the presence of a notary public on 2024-10-04.
+          </p>
+        </div>
+
+        <div className="sign">
+          <div className="item">
+            <h5>Borrower Details:</h5>
+            <p>Name: John Doe</p>
+            <p>Father Name: Venkatesh</p>
+            <p>Mobile No: 7780571080</p>
+            <p>Aadhar Card: 789456124569</p>
+          </div>
+        </div>
+        <div className="borrowimg">
+          <div className="item1">
+            <h5>Borrower Signature:</h5>
+            <label><input type="image" alt="Borrower Signature" /></label>
+          </div>
+        </div>
       </div>
 
-      <div className="sign">
-        <div className="item">
-          <h5>(Borrower) :{borrower}</h5>
-          <h5>Date :{date}</h5>
-        </div>
-        <div className="item">
-          <h5>(Lender) :{Lender}</h5>
-          <h5>Date :{date}</h5>
-        </div>
-        <div className="item">
-          <h5>Borrower Signature:</h5><label><input type="image" alt="Borrower Signature" /></label>
-          
-        </div>
+      {/* Buttons for Print and Download */}
+      <div className="actions">
+        <button onClick={handlePrint}>Print Document</button>
+   
       </div>
     </div>
-    </div>
+    </>
   );
 }

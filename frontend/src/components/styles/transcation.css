@@ -1,68 +1,131 @@
-.transaction-card {
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.2s ease;
-  }
+.transcard *{
+  margin: 0px;
+  box-shadow: 0px;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+
+
+ .tblock1 img{
+  margin-top: 4rem;
+  margin-left: 20px;
+ width: 15%;
+ 
+}
+.transcard{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.transcard .tcont{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  margin-bottom: 1rem;
+  border: 2px solid rgb(15, 13, 13);
+  padding: .5rem;
+  width: 50%;
   
-  .transaction-card:hover {
-    transform: scale(1.02);
-  }
+}
+.transcard .tcont:hover{
+    box-shadow: 3px 5px 15px 5px rgb(221, 220, 220);
+   
+}
+.transcard .trcard{
+  font-size: 21px;
+  margin: .5rem;
+
+}
+.transcard .tcontain{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+ gap: 2rem;
+
+}
+.page-border {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 10px;
+  background: linear-gradient(to bottom, #6a11cb, #2575fc); /* Gradient border */
+  z-index: 1;
+}
+
+.page-border.left {
+  left: 0;
+}
+
+.tblock1 img {
+  display: block;
+  margin: 2rem auto;
+  width: 15%;
+  border-radius: 50%;
+  border: 5px solid #6a11cb; /* Add stylish border to the image */
+}
+.page-border.right {
+  right: 0;
+}
+.transcard button{
+  margin: 1rem;
+  font-size: 25px;
+  width: 100%;
+  background-color: white;
   
-  .transaction-card .card-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+  border: 3px solid rgb(95, 37, 159);
+}
+.transcard button:hover{
+  transition: .4s ease-in-out;
   
-  .transaction-info h3 {
-    font-size: 18px;
-    margin: 0;
-    color: #333;
-  }
-  
-  .transaction-info p {
-    font-size: 14px;
-    color: #777;
-  }
-  
-  .view-button {
-    padding: 8px 12px;
-    font-size: 14px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-  }
-  
-  .view-button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 400px) {
-    .transaction-card {
-      width: 100%;
-      padding: 10px;
+  border-radius: 50%;
+}
+.main-container {
+  margin: 0 auto;
+  width: 90%; /* Adjust width for responsiveness */
+  max-width: 1200px;
+  padding: 1rem;
+  position: relative;
+  z-index: 2;
+  background: #fff; /* White background for content area */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width:670px){
+   
+    .transcard .tcont{
+       width: 100%;
+       margin-: 1rem;
     }
-  
-    .transaction-info h3 {
-      font-size: 16px;
+    .tblock1 img{
+      width: 0%;
     }
-  
-    .transaction-info p {
-      font-size: 12px;
+    .transcard *{
+      font-size: 17px;
+      
+
     }
-  
-    .view-button {
-      padding: 6px 10px;
-      font-size: 12px;
+    .transcard button{
+      width: 70%;
+      font-size: 17px;
+      height: 2.5rem;
     }
-  }
-  
+    .transcard .tcontain{
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+
+    }
+    .main-container {
+       width: 95%;
+      
+     
+       
+    }
+    
+    
+}
+

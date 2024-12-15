@@ -13,6 +13,10 @@ import Authorization from "./authorization/Authorization";
 import Document from "./components/Document";
 import RequestPage from "./components/RequestPage";
 import TransactionCard from "./components/TransactionCard";
+import LendForm from "./components/LendForm";
+import Notification from "./components/Notification";
+import Lend from "./components/Lend";
+
 
 function App() {
   return (
@@ -21,15 +25,19 @@ function App() {
         <Route exact path='/' element={<Login/>}/>
         <Route  path='/login' element={<Login/>}/>
         <Route  path='/register' element={<Register/>}/>
+          <Route  path='/contact' element={<Contact/>}/>
         {/* <Route element={Authorization}> */}
           <Route  path='/dashboard' element={<Dashboard/>}/>
+          <Route  path='/dashboard/lend/' element={<Lend/>}/>
+          <Route  path='/dashboard/lend/document' element={<Document/>}/>
           <Route  path='/borrowerform' element={<BorrowForm/>}/>
           <Route  path='/footer' element={<Footer/>}/>
           <Route  path='/header2' element={<Header2/>}/>
-          <Route  path='/document' element={<Document/>}/>
           <Route  path='/request' element={<RequestPage/>}/>
           <Route  path='/transaction' element={<TransactionCard/>}/>
-          <Route  path='/form1' element={<BorrowForm/>}/>
+          <Route  path='/notify' element={<Notification  />}/>
+         
+          {/* <Route  path='/trans2' element={<Trans2 />}/> */}
         
       </Routes>
     </BrowserRouter>

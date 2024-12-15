@@ -1,0 +1,63 @@
+.Notification * {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin: 0;
+}
+
+.Notification .app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Notification .notification-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    padding: 16px;
+    margin: 10px;
+}
+
+.Notification .notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Notification .person-name {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.Notification .notification-date {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.Notification .notification-content {
+    margin: 16px 0;
+    font-size: 1em;
+}
+
+.Notification .notification-footer {
+    text-align: right;
+}
+
+.Notification .view-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Notification .view-button:hover {
+    background-color: #0056b3;
+}
