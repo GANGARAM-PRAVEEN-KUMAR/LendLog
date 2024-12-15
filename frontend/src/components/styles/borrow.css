@@ -1,32 +1,42 @@
-.BorrowerForm *{
-    margin:0px;
+/* Global styles for all elements inside BorrowerForm */
+.BorrowerForm * {
+    margin: 0px;
     box-sizing: border-box;
     text-decoration: none;
     font-family: 'Times New Roman', Times, serif;
     align-items: center;
-  
 }
-.BorrowerForm{
+
+/* Main BorrowerForm styling */
+.BorrowerForm {
     display: flex;
     justify-content: center;
 }
-.BorrowerForm h1{
-    font-size: 4rem; 
+
+/* Heading style */
+.BorrowerForm h1 {
+    font-size: 4rem;
     color: rgb(95, 37, 159);
     margin: .7rem;
 }
-.BorrowerForm .FrndBorrowForm{
+
+/* FrndBorrowForm container styling */
+.BorrowerForm .FrndBorrowForm {
     margin: 2rem;
-    box-shadow:   rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    ;
+    background:white;
+    border-radius: 12px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+                rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+                rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     display: flex;
     flex-direction: column;
     justify-self: center;
-
     width: 50%;
-   
+    position: relative; /* Make this relative for positioning the close button */
 }
-.BorrowerForm .Bform{
+
+/* Form styles */
+.BorrowerForm .Bform {
     margin: 1rem;
     padding: 1rem;
     font-size: 23px;
@@ -36,106 +46,124 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
-   
-   
 }
 
-.BorrowerForm .item{
+/* Item styling */
+
+
+.BorrowerForm .item {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 2rem;
     align-items: center;
-  
 }
+
+/* Input field styling */
 .BorrowerForm input[type='text'],
 .BorrowerForm input[type='date'],
-.BorrowerForm input[type='email']
-{
+.BorrowerForm input[type='email'] {
     border: none;
     border-bottom: 1px solid black;
     width: 100%;
 }
-.BorrowerForm .butn{
- width: 100%;
- margin: 1rem;
 
-
-}
-.BorrowerForm .butn{
+/* Button container styling */
+.BorrowerForm .butn {
+    width: 100%;
+    margin: 1rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 2rem;
 }
-.BorrowerForm .butn button{
-    
+
+/* Button styling */
+.BorrowerForm .butn button {
     width: 200px;
-    height: 2rem;
-   
+    height: 2.5rem;
     color: white;
     background-color: rgb(95, 37, 159);
     opacity: .8;
     border-radius: 5px;
-   
-    
-    
-} 
-.BorrowerForm .butn button:hover{
-    
-    
-   
-    opacity: 2;
-    
-} 
-.BorrowerForm .butn button:active{
-    
-    
-    background-color: rgb(95, 37, 159);
-    opacity: 2;
-    
-} 
-@media screen and (max-width:900px) {
-    .BorrowerForm .FrndBorrowForm{
-        width: 100%;
-     }
-    }
-
-@media screen and (max-width:800px) {
-    .BorrowerForm h1{
-         font-size: 3rem;
-    }
-    .BorrowerForm .butn button{
-       width:170px;
-    }
-    .BorrowerForm .FrndBorrowForm{
-       width: 100%;
-    }
-    .BorrowerForm .item{
-        font-size: 23px;
-    }
-
-
 }
-@media screen and (max-width:700px) {
-    .BorrowerForm .butn button{
-        width:150px;
-     }
-    }
 
-@media screen and (max-width:400px) {
-    .BorrowerForm h1{
+/* Button hover effect */
+.BorrowerForm .butn button:hover {
+    opacity: 1; /* Change opacity to 1 on hover */
+}
+
+/* Button active state */
+.BorrowerForm .butn button:active {
+    background-color: rgb(95, 37, 159);
+    opacity: 1; /* Ensure full opacity on active */
+}
+
+/* Overlay background with blur */
+.BorrowerForm .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    backdrop-filter: blur(10px); /* Background blur */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* Ensure it appears above other content */
+}
+
+/* Close button styling */
+.BorrowerForm .close-button {
+    position: absolute; /* Position the close button absolutely within the FrndBorrowForm */
+    top: 15px; /* Distance from the top */
+    right: 15px; /* Distance from the right */
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it appears above the card */
+    transition: color 0.3s ease;
+}
+
+
+.BorrowerForm .close-button:hover {
+    color: #ff4c4c; /* Change color on hover */
+}
+
+/* Responsive styling */
+@media screen and (max-width: 900px) {
+    .BorrowerForm .FrndBorrowForm {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .BorrowerForm h1 {
+        font-size: 3rem;
+    }
+    .BorrowerForm .butn button {
+        width: 170px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .BorrowerForm .butn button {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .BorrowerForm h1 {
         font-size: 2rem;
     }
-   
-    .BorrowerForm .butn button{
-        width:120px;
-     }
-        
-    .BorrowerForm .item{
-        gap:1rem;
+    .BorrowerForm .butn button {
+        width: 120px;
     }
-
-
+    .BorrowerForm .item {
+        gap: 1rem;
+    }
 }

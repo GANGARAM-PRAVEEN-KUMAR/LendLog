@@ -1,34 +1,44 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import logo from "./images/logo3.jpg"
+import logo3 from "./images/logo3.jpg"
 import "./styles/head1.css"
 function Header1() {
   return (
     <>
       <div className="head1">
-        <div className="container">
-          <div className="header">
-            <div className="box1">
-              <img src={logo} className="img1" alt=""/>
-              <h1 className="head1">LendLog</h1>
+        <div className="LendHome2">
+           <nav className="navbar navbar-expand-lg bg-body-tertiary ">
+         <div className="container-fluid ">
+            <div className="flex1">
+                <div className="imgbg">
+                   <img src={logo3} alt="" />
+                </div>
+                <div className="lend">
+                   <h1>LendLog</h1>
+                </div>
             </div>
-            <ul className="order">
+           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+             <span className="navbar-toggler-icon"></span>
+           </button>
+           <div className="collapse navbar-collapse" id="navbarSupportedContent">
+             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+               <li className="nav-item">
+                 <NavLink className="nav-link active text-dark" aria-current="page" to="/Login">Login</NavLink>
+               </li>
+               <li className="nav-item">
+                 <NavLink className="nav-link text-dark" to="/register">Register</NavLink>
+               </li>
+               <li className="nav-item">
+                 <NavLink className="nav-link text-dark" to="/contact">Contact Us</NavLink>
+               </li>
               
-              <li className="item">
-                <NavLink to="/register" className="link">Register</NavLink>
-              </li>
-              <li className="item">
-                <NavLink to="/login"  className="link">Login</NavLink>
-              </li>
-              <li className="item">
-                <NavLink to="/contactus"  className="link">Contact Us</NavLink>
-              </li>
-            </ul>
-          </div>
-          {/* <div className="logout">
-            <button className="l1">Logout</button>
-          </div> */}
-        </div>
+               </ul>
+               
+             </div>
+           </div>
+         
+       </nav>
+      </div>
       </div>
     </>
   );

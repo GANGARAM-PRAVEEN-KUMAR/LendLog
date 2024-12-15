@@ -2,6 +2,7 @@ import React from 'react'
 import logo3 from './images/logo3.jpg'
 import './styles/home2.css'
 import { useState } from 'react'
+import { NavLink,Link } from 'react-router-dom'
 export default function Header2() {
     const [text, setText] = useState("Profile")
    let headtext=()=>{
@@ -23,7 +24,7 @@ export default function Header2() {
             <img src={logo3} alt="" />
          </div>
          <div className="lend">
-            <h1>LenLog</h1>
+            <h1>LendLog</h1>
          </div>
      </div>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -32,32 +33,32 @@ export default function Header2() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
         <li className="nav-item">
-          <a className="nav-link active text-dark" aria-current="page" href="#">Home</a>
+          <NavLink className="nav-link active text-dark" aria-current="page" to="/dashboard">Home</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Status</a>
+          <NavLink className="nav-link text-dark" to="/dashboard">Status</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">History</a>
+          <NavLink className="nav-link text-dark" to="#">History</NavLink>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-dark" href="#">Notifications</a>
+          <NavLink className="nav-link text-dark" to="#">Notifications</NavLink>
         </li>
         </ul>
         <ul className="navbar-nav mx-5">
 
         
-        <li className="nav-item dropdown ">
-          <a className="nav-link dropdown-toggle text-dark " onClick={headtext} href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <li className="nav-item dropdown  ">
+          <NavLink className="nav-link dropdown-toggle text-dark " onClick={headtext} to="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 {text}
-          </a>
+          </NavLink>
 
           <div className="container">
-          <ul className="dropdown-menu">
-            <li><a className="dropdown-item " href="#">Profile</a></li>
-            <li><a className="dropdown-item" href="#">Settings</a></li>
+          <ul className="dropdown-menu ">
+            <li><Link className="dropdown-item" href="/Footer">Profile</Link></li>
+            <li><Link className="dropdown-item" to="#">Settings</Link></li>
            
-            <li><a className="dropdown-item" href="#">Logout</a></li>
+            <li><Link className="dropdown-item "  to="#">Logout</Link></li>
           </ul>
           </div>
           

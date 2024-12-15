@@ -5,6 +5,8 @@ import "./styles/register.css";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header1 from "./Header1"
+import Footer from "./Footer";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -54,6 +56,7 @@ function Register() {
 
   return (
     <>
+    <Header1/>
       <div className="ultraregister">
         <div className="proregister">
           <div className="massregister">
@@ -169,7 +172,7 @@ function Register() {
                   </a>
                 </p>
               </div>
-              <div className="btn">
+              <div className="butt">
                 <p>
                   <button type="submit" className="btn1">Sign Up</button>
                 </p>
@@ -183,6 +186,7 @@ function Register() {
         </div>
       </div>
       <ToastContainer />
+      <Footer/>
     </>
   );
 }
