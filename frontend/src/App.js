@@ -16,12 +16,22 @@ import TransactionCard from "./components/TransactionCard";
 import LendForm from "./components/LendForm";
 import Notification from "./components/Notification";
 import Lend from "./components/Lend";
+import SICal from "./components/SICal";
+import BorrowNotify from "./components/BorrowNotify";
+import EveryDayInstalment from "./components/Edi";
+import Profile from "./components/Profile";
+import Transacdetails from "./components/Transacdetails";
+
+
+
 
 
 function App() {
   return (
     <BrowserRouter>
+  
       <Routes>
+      
         <Route exact path='/' element={<Login/>}/>
         <Route  path='/login' element={<Login/>}/>
         <Route  path='/register' element={<Register/>}/>
@@ -36,6 +46,12 @@ function App() {
           <Route  path='/request' element={<RequestPage/>}/>
           <Route  path='/transaction' element={<TransactionCard/>}/>
           <Route  path='/notify' element={<Notification  />}/>
+          <Route  path='/bnotify' element={<BorrowNotify  />}/>
+          <Route  path='/sical' element={<SICal  />}/>
+          <Route  path='/borrowN' element={<BorrowNotify  />}/>
+          <Route  path='/edi' element={<EveryDayInstalment />}/>
+          <Route  path='/profile' element={<Profile />}/>
+          <Route  path='/Transacdetails' element={<Transacdetails/>}/>
          
           {/* <Route  path='/trans2' element={<Trans2 />}/> */}
         

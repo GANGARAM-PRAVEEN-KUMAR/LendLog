@@ -1,63 +1,182 @@
-.Notification * {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+ .Notification *{
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-size: 17px;    
+
+}
+.Notification{
     display: flex;
     justify-content: center;
-    align-items: center;
+   
+    overflow: auto;
     
-    margin: 0;
+}
+.notspace{
+    margin-top: 5rem;
 }
 
-.Notification .app {
+
+.Notification .notification-header{
+   
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    gap: 4rem;
+    font-weight: bold;
 }
+.Notification .notification-card{
+    width: 35%;
+    border: 2.5px solid black;
+    padding: 10px;
+    height: auto;
+    margin-bottom: .7rem;
 
-.Notification .notification-card {
-    background-color: #fff;
+
+}
+.Notification .notification-card:hover{
+    transition: 0.3s ease-in-out;
+    box-shadow: 3px 5px 15px 5px rgb(100, 98, 98);
+}
+.Notification .notification-footer{
+    display: flex;
+    justify-content: end;
+}
+.Notification .notification-footer button:hover{
+     background-color: rgb(95, 37, 159);
+     color: white;
+     opacity: 0.8;
+}
+.Notification .notification-footer button:active{
+     background-color: rgb(95, 37, 159);
+     color: white;
+}
+.Notification .notification-footer button{
+    width: 20%;
+    height: 2rem;
+    background-color: white;
+    color: rgb(95, 37, 159);
+    font-size: 21px;
+
+}
+/* Base styles for notification card */
+.notification-card {
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #f9f9f9; /* Lighter background for the notification */
+    border: 1px solid #ddd;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    padding: 16px;
-    margin: 10px;
-}
-
-.Notification .notification-header {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Add color when notification is seen */
+  .notification-card.seen {
+    background-color: #e0f7fa; /* Light cyan when seen */
+  }
+  
+  .notification-card.not-seen {
+    background-color: #ffebee; /* Light red when not seen */
+  }
+  
+  .notification-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-}
-
-.Notification .person-name {
-    font-size: 1.2em;
-    margin: 0;
-}
-
-.Notification .notification-date {
-    font-size: 0.9em;
-    color: #888;
-}
-
-.Notification .notification-content {
-    margin: 16px 0;
-    font-size: 1em;
-}
-
-.Notification .notification-footer {
-    text-align: right;
-}
-
-.Notification .view-button {
-    background-color: #007bff;
-    color: white;
+    margin-bottom: 0.5rem;
+    background-color: #5f259f; /* Deep teal header background */
+    padding: 0.5rem;
+    border-radius: 8px 8px 0 0;
+  }
+  
+  .person-name {
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.1rem;
+  }
+  
+  .notification-date {
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  /* Content styling */
+  .notification-content {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Status styling */
+  .notification-status {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+  
+  .status-seen {
+    color: rgb(99, 164, 189); /* Green for seen */
+    font-weight: bold;
+  }
+  
+  .status-not-seen {
+    color: lightgray; /* Red for not seen */
+    font-weight: bold;
+  }
+  
+  /* Button styling */
+  .toggle-seen-button {
+    background-color: #fff; /* Green button for seen */
+    color: grey;
+    padding: 8px 16px;
     border: none;
-    border-radius: 4px;
-    padding: 8px 12px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  /* Button hover effect */
+  .toggle-seen-button:hover {
+     opacity: .8;
+  }
+  
+  /* Button when not seen */
+  .toggle-seen-button.not-seen {
+    background-color: #f44336; /* Red button for not seen */
+  }
+  
+  .toggle-seen-button.not-seen:hover {
+    background-color: #e53935;
+  }
+  
+  .toggle-seen-button:focus {
+    outline: none;
+  }
+  
+  /* Notification card hover effect */
+  .notification-card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  }
+  
+@media screen and (max-width:709px)  {
+    .Notification .notification-card{
+         margin: 1rem;
+          width: 100%;
+    }
+    .Notification .notification-footer button{
+       width: 40%;
+    }
+}
+@media screen and (min-width:710px )  and (max-width:900px) {
+    .Notification .notification-card{
+          width: 70%;
+    }
+   
+}
+@media screen and (min-width:910px )  and (max-width:1300px) {
+    .Notification .notification-card{
+          width: 60%;
+    }
+   
 }
 
-.Notification .view-button:hover {
-    background-color: #0056b3;
-}

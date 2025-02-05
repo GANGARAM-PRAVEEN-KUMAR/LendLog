@@ -1,6 +1,6 @@
 import React from "react";
 import logo3 from "./images/logo3.jpg";
-import "./styles/home2.css";
+import "./styles/Nav.css";
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 export default function Navigation() {
@@ -15,7 +15,7 @@ export default function Navigation() {
 
   return (
     <>
-      <div className="LendHome2">
+      <div className="Nav">
         <nav className="navbar navbar-expand-lg bg-body-tertiary ">
           <div className="container-fluid ">
             <Link className="log" to="/dashboard">
@@ -55,7 +55,7 @@ export default function Navigation() {
                 </li>
                 <li className="nav-item">
                   <NavLink className="nav-link text-dark" to="/transaction">
-                    Transactons
+                    Transactions
                   </NavLink>
                 </li>
 
@@ -81,7 +81,7 @@ export default function Navigation() {
                   <div className="container">
                     <ul className="dropdown-menu ">
                       <li>
-                        <Link className="dropdown-item" href="/Footer">
+                        <Link className="dropdown-item" to="/Profile">
                           Profile
                         </Link>
                       </li>

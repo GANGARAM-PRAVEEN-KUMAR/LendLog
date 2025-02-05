@@ -7,23 +7,57 @@
 
 
  .tblock1 img{
-  margin-top: 4rem;
+  margin-top: 2rem;
   margin-left: 20px;
  width: 15%;
+
  
 }
+
 .transcard{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  
+}
+.filterbtn{
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.filterbtn .btn{
+  width: 90%;
+}
+ .filterbtn .form-control{
+  width: 100%;
+ }
+.filterbtn button{
+  width: 10%;
+  height: 2rem;
+  color: white;
+  border-radius: 15px;
+  background-color: rgb(95, 37, 159);
+  align-items: center;
+}
+.filterbtn button:hover{
+   opacity: 0.8; 
+ 
+}
+.filterbtn button:active{
+  color: rgb(95, 37, 159);
+  background-color: #fff;
+  border: 2.5px solid rgb(95, 37, 159);
 }
 .transcard .tcont{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  margin-bottom: 1rem;
-  border: 2px solid rgb(15, 13, 13);
+  margin-bottom: .3em;
+  border: 3px solid rgb(15, 13, 13);
+  border-radius: 10px 10px 10px 10px;
   padding: .5rem;
   width: 50%;
   
@@ -44,18 +78,28 @@
  gap: 2rem;
 
 }
+@keyframes moveBorder {
+  0% { height: 0; }
+  25% {height: 25vh ;}
+  50% {height: 50vh;}
+  75% {height: 75vh;}
+  100% { height: 100vh; }
+}
+
 .page-border {
   position: fixed;
   top: 0;
   bottom: 0;
-  width: 10px;
-  background: linear-gradient(to bottom, #6a11cb, #2575fc); /* Gradient border */
+  width: 7px;
+  background: linear-gradient(to bottom, #6a11cb, #2575fc);
   z-index: 1;
+  animation: moveBorder 2s ease-in-out infinite alternate;
 }
 
 .page-border.left {
   left: 0;
 }
+
 
 .tblock1 img {
   display: block;
@@ -66,10 +110,11 @@
 }
 .page-border.right {
   right: 0;
+
 }
 .transcard button{
   margin: 1rem;
-  font-size: 25px;
+  font-size: 17px;
   width: 100%;
   background-color: white;
   
@@ -80,9 +125,15 @@
   
   border-radius: 50%;
 }
+.transcard button:active{
+  background-color: rgb(95, 37, 159);
+  color: white;
+  border-radius: 50%;
+}
 .main-container {
   margin: 0 auto;
-  width: 90%; /* Adjust width for responsiveness */
+  margin-bottom: 1rem;
+  width: 70%; /* Adjust width for responsiveness */
   max-width: 1200px;
   padding: 1rem;
   position: relative;
@@ -95,10 +146,19 @@
   justify-content: center;
 }
 @media screen and (max-width:670px){
-   
+  .filterbtn {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  
+  }
+  .filterbtn button{
+    width: 60%;
+  }
+
     .transcard .tcont{
        width: 100%;
-       margin-: 1rem;
+       margin: 1rem;
     }
     .tblock1 img{
       width: 0%;
@@ -109,6 +169,7 @@
 
     }
     .transcard button{
+      padding: .5rem;
       width: 70%;
       font-size: 17px;
       height: 2.5rem;
@@ -127,5 +188,34 @@
     }
     
     
+}
+
+@media screen and (max-width:400px){
+  .filterbtn button{
+    width: 10rem;
+   padding-right: 4rem;
+
+  }
+  .filterbtn{
+    width:100%;
+  }
+  .main-container {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width:900px){
+  .transcard .tcont{
+   width: 100%;
+  }
+  .filterbtn button{
+    width: 20%;
+  }
+}
+@media screen and (max-width:1200px) and (min-width:900px){
+  .transcard .tcont{
+   width: 80%;
+  }
 }
 

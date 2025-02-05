@@ -8,13 +8,25 @@ export default function Document() {
   const handlePrint = () => {
     window.print();
   };
-
+const renderCoins = () => {
+    const coins = [];
+    for (let i = 0; i < 50; i++) {
+      coins.push(<div className="coin" key={i}></div>);
+    }
+    return coins;
+  };
 
 
   return (
     <>
+  
     <Navigation/>
+    
+    <div className='notspace'>
+     .
+     </div>
     <div className="document">
+    {renderCoins()}
       <div className="FullForm" id="document-content">
         <div className="agreement">
           <div className="dochead">

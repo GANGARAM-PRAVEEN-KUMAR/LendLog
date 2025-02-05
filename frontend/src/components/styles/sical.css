@@ -1,0 +1,88 @@
+.simplecal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9; /* Light background color */
+  }
+  
+  .SIcontainer {
+    background: white; /* White card background */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for a card effect */
+    padding: 30px;
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .SIcontainer h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #333;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  .input-group p {
+    margin: 0;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .submit-button {
+    background-color: #6c63ff; /* Button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #574bff; /* Darker hover effect */
+  }
+  
+  .result {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #444;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 480px) {
+    .SIcontainer {
+      padding: 20px;
+    }
+  
+    .SIcontainer h2 {
+      font-size: 1.5rem;
+    }
+  
+    .input-group input {
+      font-size: 0.9rem;
+    }
+  
+    .submit-button {
+      font-size: 0.9rem;
+    }
+  
+    .result {
+      font-size: 1rem;
+    }
+  }
+  

@@ -1,5 +1,5 @@
 .ultralogin *{
-  margin: 0%;
+  margin: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
 
@@ -70,6 +70,7 @@ opacity: 2px;
 
 
 }
+
 .ultralogin button:hover{
  
    width: 50%;
@@ -143,6 +144,7 @@ opacity: 2px;
       width: 100%;
    }
    .ultralogin .masslogin{
+    box-shadow: 3px 3px 30px 3px black;
     font-size: 25px;
       width: 100%;
    }
@@ -157,6 +159,7 @@ opacity: 2px;
       width: 100%;
    }
    .ultralogin .masslogin{
+    box-shadow: 3px 3px 30px 3px black;
       width: 100%;
    }
    .ultralogin .fullbox{
@@ -165,20 +168,23 @@ opacity: 2px;
 
 }
 @media screen and (max-width:600px){
-  
+  .ultralogin .smallbox img{
+    width: 0;
+  }
   .ultralogin  .box{
     width: 100%;
   }
   .ultralogin  .fullbox{
     width: 100%;
+    height: 0;
     
   }
    .ultralogin .masslogin{
+    box-shadow: 3px 3px 30px 3px black;
       display: flex;
       flex-direction: column;
   
       
-      box-shadow: 0px 0px 0px 0px;
       
 
    }
