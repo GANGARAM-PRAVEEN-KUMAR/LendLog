@@ -57,6 +57,9 @@ function Register() {
   return (
     <>
     <Header1/>
+    <div className="notspace">
+   .
+    </div>
       <div className="ultraregister">
         <div className="proregister">
           <div className="massregister">

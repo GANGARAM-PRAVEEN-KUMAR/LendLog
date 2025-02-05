@@ -10,6 +10,9 @@ function Contact() {
     <>
     <Header1/>
     {/* <Header2/> */}
+    <div className="notspace">
+   .
+    </div>
       <div class="contactus">
         <div class="support">
           <div class="support-img">

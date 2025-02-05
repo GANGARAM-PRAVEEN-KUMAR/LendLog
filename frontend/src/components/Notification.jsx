@@ -1,31 +1,118 @@
 import React, { useState } from 'react';
 import "./styles/notification.css";
+import Navigation from './Navigation';
+import Footer from './Footer';
+import Header2 from './Header2';
 
 export default function Notification() {
-  const [name, setName] = useState("Invalid");
-  const [date, setDate] = useState("00-00-0000");
-  const [content, setContent] = useState("Say no cancer");
+  // Sample data for notifications
+  const [notifications, setNotifications] = useState([
+    {
+      id: 1,
+      name: "John Doe",
+      date: "October 26, 2024",
+      content: "Stay informed: Regular check-ups are essential for early detection!",
+      seen: false,
+    }
+   
+    // Add more notifications here if needed
+  ]);
 
-  const updateNotification = () => {
-    setName("John Doe");
-    setDate("October 26, 2024");
-    setContent("Stay informed: Regular check-ups are essential for early detection!");
+  const toggleSeen = (id) => {
+    setNotifications(notifications.map((notification) =>
+      notification.id === id
+        ? { ...notification, seen: !notification.seen }
+        : notification
+    ));
   };
 
   return (
-    <div className='Notification'>
-      <div className="notification-card">
-        <div className="notification-header">
-          <h3 className="person-name">{name}</h3>
-          <p className="notification-date">{date}</p>
-        </div>
-        <div className="notification-content">
-          <p>{content}</p>
-        </div>
-        <div className="notification-footer">
-          <button className="view-button" onClick={updateNotification}>View</button>
-        </div>
+    <>
+      <Header2 />
+      <div className='notspace'>
+        {/* Placeholder for spacing */}
       </div>
-    </div>
+
+      <div className='Notification'>
+        {notifications.map((notification) => (
+          <div key={notification.id} className="notification-card">
+            <div className="notification-header">
+              <p className="person-name">{notification.name}</p>
+              <p className="notification-date">{notification.date}</p>
+            </div>
+            <div className="notification-content">
+              <p>{notification.content}</p>
+            </div>
+            <div className="notification-status">
+              {notification.seen ? (
+                <span className="status-seen">✔ Seen</span>
+              ) : (
+                <span className="status-not-seen">✘ Not Seen</span>
+              )}
+            </div>
+            <button
+              className="toggle-seen-button"
+              onClick={() => toggleSeen(notification.id)}
+            >
+              Mark as {notification.seen ? "Unseen" : "Seen"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className='Notification'>
+        {notifications.map((notification) => (
+          <div key={notification.id} className="notification-card">
+            <div className="notification-header">
+              <p className="person-name">{notification.name}</p>
+              <p className="notification-date">{notification.date}</p>
+            </div>
+            <div className="notification-content">
+              <p>{notification.content}</p>
+            </div>
+            <div className="notification-status">
+              {notification.seen ? (
+                <span className="status-seen">✔ Seen</span>
+              ) : (
+                <span className="status-not-seen">✘ Not Seen</span>
+              )}
+            </div>
+            <button
+              className="toggle-seen-button"
+              onClick={() => toggleSeen(notification.id)}
+            >
+              Mark as {notification.seen ? "Unseen" : "Seen"}
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className='Notification'>
+        {notifications.map((notification) => (
+          <div key={notification.id} className="notification-card">
+            <div className="notification-header">
+              <p className="person-name">{notification.name}</p>
+              <p className="notification-date">{notification.date}</p>
+            </div>
+            <div className="notification-content">
+              <p>{notification.content}</p>
+            </div>
+            <div className="notification-status">
+              {notification.seen ? (
+                <span className="status-seen">✔ Seen</span>
+              ) : (
+                <span className="status-not-seen">✘ Not Seen</span>
+              )}
+            </div>
+            <button
+              className="toggle-seen-button"
+              onClick={() => toggleSeen(notification.id)}
+            >
+              Mark as {notification.seen ? "Unseen" : "Seen"}
+            </button>
+          </div>
+        ))}
+      </div>
+
+      <Footer />
+    </>
   );
 }

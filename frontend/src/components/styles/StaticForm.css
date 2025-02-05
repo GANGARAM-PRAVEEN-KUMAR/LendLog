@@ -232,5 +232,27 @@
   }
 
 }
+.coin {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: gold; /* Use background-color explicitly */
+  border-radius: 50%; /* Circular coins */
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Adds a glow effect */
+  animation: fall 4s linear infinite;
+  z-index: 1; /* Keeps coins above other elements */
+}
+
+/* Varying animation properties for multiple coins */
+.coin:nth-child(1) { left: 5%; animation-duration: 3s; }
+.coin:nth-child(2) { left: 15%; animation-duration: 4.2s; }
+.coin:nth-child(3) { left: 25%; animation-duration: 3.8s; }
+.coin:nth-child(4) { left: 35%; animation-duration: 4.5s; }
+.coin:nth-child(5) { left: 45%; animation-duration: 3.5s; }
+.coin:nth-child(6) { left: 55%; animation-duration: 4.1s; }
+.coin:nth-child(7) { left: 65%; animation-duration: 3.9s; }
+.coin:nth-child(8) { left: 75%; animation-duration: 4.3s; }
+.coin:nth-child(9) { left: 85%; animation-duration: 3.7s; }
+.coin:nth-child(10) { left: 95%; animation-duration: 4s; }
 
   

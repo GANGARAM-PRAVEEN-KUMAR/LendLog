@@ -1,18 +1,11 @@
- .LendHome2 *{
+.Nav *{
     margin: 0%;
   
 
  }
  
- .LendHome2{
-  
-   width: 100%;
-   position: fixed;
-   top: 0;
-   z-index: 99999;
-  
- }
- .LendHome2 .container-fluid{
+ 
+ .Nav .container-fluid{
     box-shadow: 3px 15px 20px 15px silver;
     color: rgb(95, 37, 159);
     width: 100%;
@@ -20,7 +13,7 @@
     border-bottom: .1rem solid rgb(95, 37, 159);
     
  }
- .LendHome2 .flex1{
+ .Nav .flex1{
     margin: .5rem;
     display: flex;
     flex-direction: row;
@@ -28,18 +21,18 @@
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
  }
- .LendHome2 .imgbg img{
+ .Nav .imgbg img{
    width:60px;
  }
- .LendHome2 .log{
+ .Nav .log{
    text-decoration: none;
    color: rgb(95, 37, 159);
  }
- .LendHome2 .nav-link:hover{
+ .Nav .nav-link:hover{
    transition: .7s ease-out;
    border-bottom:2px solid black ;
  }
- .LendHome2 .navbar-nav{
+ .Nav .navbar-nav{
     font-family: 'Times New Roman', Times, serif;
     margin-left: 2rem;
     font-size: 1.3rem;
@@ -48,14 +41,14 @@
    
 
  }
- .LendHome2 .container{
+ .Nav .container{
     margin-right: 6rem;
  }
- .LendHome2 .dropdown-menu NavLink{
+ .Nav .dropdown-menu NavLink{
     background-color: white;
      
  } 
- .LendHome2 .dropdown-menu{
+ .Nav .dropdown-menu{
       font-size:1.3rem ;
       border: none;
       width: 10%;
@@ -64,7 +57,7 @@
  }
 
  @media only screen and (max-width:1000px) {
-  .LendHome2 .navbar-nav{
+  .Nav .navbar-nav{
    display: flex;
    gap: .5rem;
   }

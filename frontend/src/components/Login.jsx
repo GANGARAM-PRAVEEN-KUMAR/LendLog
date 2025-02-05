@@ -43,6 +43,9 @@ function Login() {
     
     <>
     <Header1/>
+    <div className="notspace">
+   .
+    </div>
       <div className="ultralogin">
         <div className="prologin">
           <div className="masslogin">
@@ -98,7 +101,7 @@ function Login() {
           </div>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="bottom-right" />
       <Footer/>
     </>
   );

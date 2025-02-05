@@ -42,7 +42,7 @@ export default function Header2() {
           <NavLink className="nav-link text-dark" to="#">History</NavLink>
         </li>
         <li className="nav-item">
-          <NavLink className="nav-link text-dark" to="#">Notifications</NavLink>
+          <NavLink className="nav-link text-dark" to="/notify">Notifications</NavLink>
         </li>
         </ul>
         <ul className="navbar-nav mx-5">
@@ -55,7 +55,7 @@ export default function Header2() {
 
           <div className="container">
           <ul className="dropdown-menu ">
-            <li><Link className="dropdown-item" href="/Footer">Profile</Link></li>
+            <li><Link className="dropdown-item" to="/profile">Profile</Link></li>
             <li><Link className="dropdown-item" to="#">Settings</Link></li>
            
             <li><Link className="dropdown-item "  to="#">Logout</Link></li>
@@ -69,6 +69,7 @@ export default function Header2() {
     </div>
   
 </nav>
+
 </div>
     </>
   )

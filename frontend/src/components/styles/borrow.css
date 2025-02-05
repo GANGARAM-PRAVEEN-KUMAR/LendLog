@@ -7,7 +7,34 @@
     align-items: center;
 }
 
+
 /* Main BorrowerForm styling */
+/* Ensure that navbar stays behind the modal */
+.navbar {
+    position: relative;
+    z-index: 1; /* Make sure navbar is behind modal */
+}
+
+/* The modal overlay should have a high z-index to appear on top */
+.BorrowerForm .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure modal is above other content */
+}
+
+/* Optional: If you want to hide the navbar while the modal is open */
+.BorrowerForm .overlay.active ~ .navbar {
+    display: none;
+}
+
 .BorrowerForm {
     display: flex;
     justify-content: center;
@@ -49,7 +76,9 @@
 }
 
 /* Item styling */
-
+.notspace{
+    margin-top: 4rem;
+}
 
 .BorrowerForm .item {
     display: flex;
@@ -159,6 +188,9 @@
 @media screen and (max-width: 400px) {
     .BorrowerForm h1 {
         font-size: 2rem;
+    }
+    .BorrowerForm{
+        margin: 2rem;
     }
     .BorrowerForm .butn button {
         width: 120px;
